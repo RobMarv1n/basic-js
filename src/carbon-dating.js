@@ -24,7 +24,7 @@ function dateSample(sampleActivity) {
   if (typeof sampleActivity === 'string') {
     let k = 0.693 / HALF_LIFE_PERIOD;
     let deathTime = Math.ceil(Math.log(MODERN_ACTIVITY / sampleActivity) / k)
-    return Boolean(deathTime) ? deathTime : false
+    return deathTime || false
   } else {
     return false
   }
