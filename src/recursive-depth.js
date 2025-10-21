@@ -22,7 +22,7 @@ class DepthCalculator {
     if (filteredArr.length === 0) {
       return count;
     } else {
-      count += this.calculateDepth([].concat(...filteredArr));
+      count += this.calculateDepth(filteredArr.flat());
       return count;
     }
   }
